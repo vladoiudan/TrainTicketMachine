@@ -1,0 +1,45 @@
+﻿@section scripts
+{
+    @Scripts.Render("~/bundles/angularJS")
+    <script src="~/Scripts/KeyboardButton.js" type="text/javascript"></script>
+    <script src="~/Scripts/App.js" type="text/javascript"></script>
+    @*@Scripts.Render("~/bundles/appJS")*@
+}
+
+<div class="jumbotron">
+    <h1>Train Station Finder - Using AngularJS</h1>
+    <p class="lead">This website allows you to find train stations.</p>
+</div>
+<div ng-app="trainStationsStore" ng-controller="MainCtrl">
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <input type="search" id="stationName" ng-model="SearchFilter" style="width: 100%" placeholder="Enter Station Name..." />
+            </div>
+            <div class="row">
+                <div class="keyboard col-md-8">
+                    <button ng-click="KeyboardButtonClick(button)" ng-repeat="button in KeyboardButtons" class="btn" ng-model="button" ng-disabled="button.IsDisabled">
+                        {{button.Text}}
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <strong>Search Results:</strong>
+            </div>
+            <div class="row">
+                <table id="searchResults">
+                    <tbody>
+                        <tr ng-repeat="station in AvailableStations">
+                            <td>{{station}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
