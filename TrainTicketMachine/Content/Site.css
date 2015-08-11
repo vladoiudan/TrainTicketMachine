@@ -1,0 +1,53 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.btn, .backspaceBtn {
+    width: 40px;
+    height: 40px;
+    background: #000080;
+    color: white;
+}
+
+    .btn[disabled],
+    .btn:hover[disabled],
+    .btn:focus[disabled],
+    .btn.focus[disabled] ,
+    .backspaceBtn[disabled],
+    .backspaceBtn:hover[disabled],
+    .backspaceBtn:focus[disabled],
+    .backspaceBtn.focus[disabled]{
+        width: 40px;
+        height: 40px;
+        color: grey;
+        background: lightgrey;
+    }
+
+    .btn:hover,
+    .btn:focus,
+    .btn.focus,
+    .backspaceBtn:hover,
+    .backspaceBtn:focus,
+    .backspaceBtn.focus {
+        background: #0000ff;
+        color: white;
+        text-decoration: none;
+    }
+
+.keyboard > table, .keyboard > td {
+    border: 1px solid black;
+}
